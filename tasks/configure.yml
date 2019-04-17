@@ -1,0 +1,15 @@
+---
+- name: Configure backup template config
+  template:
+    src: backup.conf.j2
+    dest: /opt/runlevel_backup/backup.conf
+    owner: root
+    group: root
+    mode: 0440
+- name: Configure cronjob
+  template:
+    src: backup.cron.j2
+    dest: /etc/cron.d/backup
+    owner: root
+    group: root
+    mode: 0444

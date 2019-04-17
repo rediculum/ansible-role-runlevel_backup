@@ -1,0 +1,5 @@
+---
+- include: directory.yml
+- include: package.yml
+- include: download.yml
+- include: configure.yml

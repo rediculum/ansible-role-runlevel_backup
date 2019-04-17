@@ -1,0 +1,14 @@
+---
+- name: Download backup.sh
+  get_url:
+    url: "{{ runlevel_backup_github_url }}/opt/runlevel_backup/backup.sh"
+    dest: "{{ runlevel_backup_install_dir }}/backup.sh"
+    mode: 0550
+    checksum: md5:d62b2a63729626be2c112dc75cd0f58d
+- name: Download backup.lib
+  get_url:
+    url: "{{ runlevel_backup_github_url }}/opt/runlevel_backup/backup.lib"
+    dest: "{{ runlevel_backup_install_dir }}/backup.lib"
+    mode: 0440
+    checksum: md5:f901d5c2353e39966c7f280022efd664
+    

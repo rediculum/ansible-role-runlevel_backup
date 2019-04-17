@@ -1,0 +1,28 @@
+---
+# Install vars
+runlevel_backup_github_url: 'https://raw.githubusercontent.com/rediculum/runlevel_backup/master'
+runlevel_backup_install_dir: '/opt/runlevel_backup'
+
+# Template backup.conf vars
+runlevel_backup_folders: ['/var/log','/var/www','/home','/etc','/root']
+runlevel_backup_backupserver: 'localhost'
+runlevel_backup_backupdir: '/backup/$HOSTNAME'
+runlevel_backup_mysqlbackup: 'false'
+runlevel_backup_mysqluser: 'root'
+runlevel_backup_mysqlpass: 'foobar'
+runlevel_backup_mysqlback: '/var/lib/mysql/backup'
+runlevel_backup_postgresbackup: 'false'
+runlevel_backup_postgresback: '/var/lib/postgresql/backup'
+runlevel_backup_ldapbackup: 'false'
+runlevel_backup_ldapback: '/var/lib/ldap/backup'
+runlevel_backup_ldiffile: 'planetexpress.com.ldif'
+runlevel_backup_retention: '6M'
+runlevel_backup_email: 'user@example.com'
+runlevel_backup_from: 'backup'
+
+# Template cronjob vars
+runlevel_backup_minute: 0
+runlevel_backup_hour: 14
+runlevel_backup_day: '*'
+runlevel_backup_month: '*'
+runlevel_backup_weekday: '2,5,7'
