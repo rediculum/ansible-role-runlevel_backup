@@ -2,7 +2,9 @@
 
 galaxy_info:
   author: https://github.com/rediculum/
+  role_name: runlevel_backup
   description: Ansible role for the runlevel backup framework
+  min_ansible_version: 2.2
 
   platforms:
     - name: Debian
@@ -11,18 +13,16 @@ galaxy_info:
     - name: Ubuntu
       versions:
       - all
-    - name: Centos
+    - name: EL
       versions:
       - all
 
   galaxy_tags:
-    - rdiff_backup
+    - rdiff
     - rsync
     - backup
 
   license:
   - aGPL
-
-  min_ansible_version: 2.2
 
 dependencies: []
