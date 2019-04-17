@@ -1,10 +1,10 @@
 ---
 - name: Install epel-release lsb_release mailx yum-utils
   package:
-    name: ['epel-release','redhat-lsb-core','mailx','yum-utils']
+    name: ['epel-release', 'redhat-lsb-core', 'mailx', 'yum-utils']
   when: ansible_os_family == "RedHat"
 
-- name: Import pychotic.ninja key 
+- name: Import pychotic.ninja key
   rpm_key:
     key: "http://wiki.psychotic.ninja/RPM-GPG-KEY-psychotic"
   when: ansible_os_family == 'RedHat'
@@ -20,7 +20,7 @@
 
 - name: Install rdiff-backup keychain
   package:
-    name: ['rdiff-backup','keychain']
+    name: ['rdiff-backup', 'keychain']
 
 - name: Install bsd-mailx
   package:

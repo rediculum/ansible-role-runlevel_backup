@@ -1,6 +1,6 @@
 ---
 - name: Create base directory
-  file: 
+  file:
     path: "{{ runlevel_backup_install_dir }}"
     state: directory
     mode: 0750

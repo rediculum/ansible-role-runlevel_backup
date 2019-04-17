@@ -11,7 +11,7 @@ galaxy_info:
     - name: Ubuntu
       versions:
       - all
-    - name: CentOS
+    - name: Centos
       versions:
       - all
 
@@ -21,7 +21,7 @@ galaxy_info:
     - backup
 
   license:
-  - aGPL 
+  - aGPL
 
   min_ansible_version: 2.2
 

@@ -4,7 +4,7 @@ runlevel_backup_github_url: 'https://raw.githubusercontent.com/rediculum/runleve
 runlevel_backup_install_dir: '/opt/runlevel_backup'
 
 # Template backup.conf vars
-runlevel_backup_folders: ['/var/log','/var/www','/home','/etc','/root']
+runlevel_backup_folders: ['/var/log', '/var/www', '/home', '/etc', '/root']
 runlevel_backup_backupserver: 'localhost'
 runlevel_backup_backupdir: '/backup/$HOSTNAME'
 runlevel_backup_mysqlbackup: 'false'

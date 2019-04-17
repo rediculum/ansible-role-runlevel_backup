@@ -11,4 +11,3 @@
     dest: "{{ runlevel_backup_install_dir }}/backup.lib"
     mode: 0440
     checksum: md5:f901d5c2353e39966c7f280022efd664
-    
