@@ -8,8 +8,8 @@
     mode: 0440
 - name: Configure cronjob
   template:
-    src: backup.cron.j2
-    dest: /etc/cron.d/backup
+    src: runlevel_backup.cron.j2
+    dest: /etc/cron.d/runlevel_backup
     owner: root
     group: root
     mode: 0444
