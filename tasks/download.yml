@@ -15,5 +15,5 @@
   get_url:
     url: "{{ runlevel_backup_github_url }}/opt/runlevel_backup/backup_ssh_cmnd.sh"
     dest: "{{ runlevel_backup_install_dir }}/backup_ssh_cmnd.sh"
-    mode: 0440
+    mode: 0550
     checksum: md5:baf1153035df59defc6145b9c92102ac
