@@ -28,7 +28,7 @@ runlevel_backup_month: '*'
 runlevel_backup_weekday: '2,5,7'
 
 # Template private key
-runlevel_key: |
+runlevel_backup_key: |
   -----BEGIN OPENSSH PRIVATE KEY-----
   XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
   XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
