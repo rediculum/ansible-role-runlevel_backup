@@ -13,3 +13,10 @@
     owner: root
     group: root
     mode: 0444
+- name: Put private key
+  template:
+    src: backup.key.j2
+    dest: /opt/runlevel_backup/backup.key
+    owner: root
+    group: root
+    mode: 400
