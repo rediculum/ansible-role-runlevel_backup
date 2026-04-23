@@ -25,13 +25,9 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - name: checkout
         uses: actions/checkout@v4
-
-      # Runs a single command using the runners shell
-      - name: Run test
-        run: ansible-playbook tests/test.yml -i tests/inventory --syntax-check
-
-      # Runs a set of commands using the runners shell
-      - name: Run a multi-line script
-        run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
+  
+      - name: Set role path
+        run: 'printf ''[defaults]\nroles_path=../'' >ansible.cfg'
+        
+      - name: run test playbook
+      - run: ansible-playbook tests/test.yml -i tests/inventory --syntax-check
