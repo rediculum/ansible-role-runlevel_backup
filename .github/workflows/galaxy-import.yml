@@ -33,5 +33,6 @@ jobs:
         run: ansible-playbook tests/test.yml -i tests/inventory --syntax-check
 
       - name: import to galaxy
-        env: ANSIBLE_GALAXY_API_TOKEN: ${{secrets.ANSIBLE_GALAXY_API_TOKEN}}
+        env: 
+          ANSIBLE_GALAXY_API_TOKEN: ${{secrets.ANSIBLE_GALAXY_API_TOKEN}}
         run: ansible-galaxy role import rediculum ansible-role-runlevel_backup
