@@ -4,7 +4,7 @@ galaxy_info:
   author: https://github.com/rediculum/
   role_name: runlevel_backup
   description: Ansible role for the runlevel backup framework
-  license: GPL-2.0-or-later
+  license: MIT
   min_ansible_version: 2.2
 
   platforms:
