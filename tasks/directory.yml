@@ -1,6 +1,6 @@
 ---
 - name: Create base directory
-  file:
+  ansible.builtin.file:
     path: "{{ runlevel_backup_install_dir }}"
     state: directory
-    mode: 0750
+    mode: "0750"

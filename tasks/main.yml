@@ -1,5 +1,5 @@
 ---
-- include_tasks: directory.yml
-- include_tasks: package.yml
-- include_tasks: download.yml
-- include_tasks: configure.yml
+- ansible.builtin.include_tasks: directory.yml
+- ansible.builtin.include_tasks: package.yml
+- ansible.builtin.include_tasks: download.yml
+- ansible.builtin.include_tasks: configure.yml

@@ -1,16 +1,16 @@
 ---
 - name: Download backup.sh
-  get_url:
+  ansible.builtin.get_url:
     url: "{{ runlevel_backup_github_url }}/opt/runlevel_backup/backup.sh"
     dest: "{{ runlevel_backup_install_dir }}/backup.sh"
-    mode: 0550
+    mode: "0550"
 - name: Download backup.lib
-  get_url:
+  ansible.builtin.get_url:
     url: "{{ runlevel_backup_github_url }}/opt/runlevel_backup/backup.lib"
     dest: "{{ runlevel_backup_install_dir }}/backup.lib"
-    mode: 0440
+    mode: "0440"
 - name: Download backup_ssh_cmnd.sh
-  get_url:
+  ansible.builtin.get_url:
     url: "{{ runlevel_backup_github_url }}/opt/runlevel_backup/backup_ssh_cmnd.sh"
     dest: "{{ runlevel_backup_install_dir }}/backup_ssh_cmnd.sh"
-    mode: 0550
+    mode: "0550"

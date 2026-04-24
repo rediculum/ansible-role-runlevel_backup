@@ -1,22 +1,22 @@
 ---
 - name: Configure backup template config
-  template:
+  ansible.builtin.template:
     src: backup.conf.j2
     dest: /opt/runlevel_backup/backup.conf
     owner: root
     group: root
-    mode: 0440
+    mode: "0440"
 - name: Configure cronjob
-  template:
+  ansible.builtin.template:
     src: runlevel_backup.cron.j2
     dest: /etc/cron.d/runlevel_backup
     owner: root
     group: root
-    mode: 0444
+    mode: "0444"
 - name: Put private key
-  template:
+  ansible.builtin.template:
     src: backup.key.j2
     dest: /opt/runlevel_backup/backup.key
     owner: root
     group: root
-    mode: 0400
+    mode: "0400"
