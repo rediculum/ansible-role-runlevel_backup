@@ -6,9 +6,9 @@ name: CI
 on:
   # Triggers the workflow on push or pull request events but only for the "master" branch
   push:
-    branches: [ "master" ]
+    branches: ["master"]
   pull_request:
-    branches: [ "master" ]
+    branches: ["master"]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -25,12 +25,9 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - name: checkout
         uses: actions/checkout@v4
-  
       - name: Set role path
         run: 'printf ''[defaults]\nroles_path=../'' >ansible.cfg'
-        
       - name: run test playbook
         run: ansible-playbook tests/test.yml -i tests/inventory --syntax-check
-
       - name: import to galaxy
         run: ansible-galaxy role import --token ${{ secrets.ANSIBLE_GALAXY_API_TOKEN }} ${{ github.repository_owner }} ${{ github.event.repository.name }}
