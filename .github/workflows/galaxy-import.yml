@@ -33,5 +33,4 @@ jobs:
         run: ansible-playbook tests/test.yml -i tests/inventory --syntax-check
 
       - name: import to galaxy
-        run: ansible-galaxy role import --token ${{ secrets.ANSIBLE_GALAXY_API_TOKEN }} ${{ github.repositor
-y_owner }} ${{ github.event.repository.name }}
+        run: ansible-galaxy role import --token ${{ secrets.ANSIBLE_GALAXY_API_TOKEN }} ${{ github.repository_owner }} ${{ github.event.repository.name }}
