@@ -13,11 +13,6 @@ jobs:
     steps:
       - name: 'Checkout git repo'
         uses: actions/checkout@v4
-        with:
-          submodules: true
-          fetch-depth: 0
 
-      - name: 'Release on galaxy'
-        uses: ansible-actions/ansible-galaxy-action@v1.2.0
-        with:
-          galaxy_api_key: ${{ secrets.ANSIBLE_GALAXY_API_TOKEN }}
+      - name: import to galaxy
+        run: ansible-galaxy role import --token ${{ secrets.ANSIBLE_GALAXY_API_TOKEN }} ${{ github.repository_owner }} ${{ github.event.repository.name }}
