@@ -5,18 +5,18 @@ galaxy_info:
   role_name: runlevel_backup
   description: Ansible role for the runlevel backup framework
   license: MIT
-  min_ansible_version: 2.2
+  min_ansible_version: "2.2"
 
   platforms:
     - name: Debian
       versions:
-      - all
+        - all
     - name: Ubuntu
       versions:
-      - all
+        - all
     - name: EL
       versions:
-      - all
+        - all
 
   galaxy_tags:
     - rdiff
