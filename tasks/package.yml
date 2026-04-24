@@ -17,6 +17,7 @@
 - name: Enable psychotic.ninja repo
   ansible.builtin.command: "yum-config-manager --enable psychotic"
   when: ansible_os_family == 'RedHat'
+  changed_when: false
 
 - name: Install rdiff-backup keychain
   ansible.builtin.package:
