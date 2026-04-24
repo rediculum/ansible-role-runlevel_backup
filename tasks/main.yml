@@ -10,4 +10,3 @@
 
 - name: Include configure task
   ansible.builtin.include_tasks: configure.yml
-
