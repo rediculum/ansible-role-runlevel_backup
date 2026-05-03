@@ -19,9 +19,9 @@
   when: ansible_os_family == 'RedHat'
   changed_when: false
 
-- name: Install rdiff-backup keychain
+- name: Install rdiff-backup
   ansible.builtin.package:
-    name: ['rdiff-backup', 'keychain']
+    name: rdiff-backup
 
 - name: Install bsd-mailx
   ansible.builtin.package:
