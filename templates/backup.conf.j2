@@ -4,6 +4,11 @@ FOLDERS=" \
 {{ folder }} \
 {% endfor %}
 "
+EXCLUDES=" \
+{% for folder in runlevel_backup_excludes %}
+{{ folder }} \
+{% endfor %}
+"
 BACKUPSERVER="{{ runlevel_backup_backupserver }}"
 BACKUPDIR="{{ runlevel_backup_backupdir }}"
 PKGLIST=/root/packages.installed
